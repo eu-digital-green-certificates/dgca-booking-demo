@@ -44,7 +44,7 @@ jobs:
         CF_RELEASE: linux64-binary
     - name: cf push
       run: |-
-        echo "${CF_ORG}" 
+        cf orgs
         cf api ${CF_API}
         cf auth
         cf target -o ${CF_ORG} -s ${CF_SPACE}
