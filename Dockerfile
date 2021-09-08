@@ -18,6 +18,4 @@ RUN chown -R www:www /www
 
 COPY nginx/default.conf.template /etc/nginx/templates/default.conf.template
 
-COPY index.html /www
-
 RUN ["./usr/sbin/nginx"]
