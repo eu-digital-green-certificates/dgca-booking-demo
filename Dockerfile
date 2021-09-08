@@ -19,5 +19,3 @@ COPY nginx/default.conf.template /etc/nginx/templates/default.conf.template
 EXPOSE 80
 
 RUN ["./usr/sbin/nginx"]
-
-ENTRYPOINT ["--http-port", "80", "--http-bundle", "-v"]
