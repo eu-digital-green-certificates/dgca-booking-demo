@@ -1,7 +1,5 @@
 FROM alpine:latest
 
-LABEL maintainer="stuart@newlymintedmedia.com"
-
 RUN apk add nginx
 
 RUN mkdir -p /run/nginx
