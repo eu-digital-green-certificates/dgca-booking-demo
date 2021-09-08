@@ -48,7 +48,6 @@ jobs:
         cf auth
         cf target -o ${CF_ORG} -s ${CF_SPACE}
         cf push ${APP_NAME} --docker-image ${APP_IMAGE}:${APP_VERSION} --docker-username ${CF_DOCKER_USERNAME}
-        cf logs dgca-booking-demo --recent
       env:
         APP_NAME: dgca-booking-demo
         APP_IMAGE: docker.pkg.github.com/${{ github.repository }}/dgca-booking-demo
