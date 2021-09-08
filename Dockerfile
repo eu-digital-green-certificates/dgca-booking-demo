@@ -16,7 +16,7 @@ RUN chown -R www:www /var/lib/nginx
 
 RUN chown -R www:www /www
 
-COPY nginx/default.conf.template /etc/nginx/templates/default.conf.template /etc/nginx/nginx.conf
+COPY nginx/default.conf.template /etc/nginx/templates/default.conf.template
 
 COPY index.html /www
 
