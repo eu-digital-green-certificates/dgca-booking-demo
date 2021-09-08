@@ -1,5 +1,7 @@
 FROM alpine:latest
 
+RUN apk add openrc
+
 RUN apk add nginx
 
 RUN mkdir -p /run/nginx
@@ -18,4 +20,4 @@ COPY nginx/default.conf.template /etc/nginx/templates/default.conf.template
 
 EXPOSE 80
 
-RUN ["./usr/sbin/nginx"]
+CMD ["nginx", "-g", "daemon off;"]
