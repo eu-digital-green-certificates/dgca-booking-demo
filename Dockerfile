@@ -16,6 +16,6 @@ RUN chown -R www:www /www
 
 COPY nginx/default.conf.template /etc/nginx/templates/default.conf.template
 
-EXPOSE 80:8080
+EXPOSE 80
 
 RUN ["./usr/sbin/nginx"]
