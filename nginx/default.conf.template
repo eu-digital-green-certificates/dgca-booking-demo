@@ -1,6 +1,15 @@
 server {
     listen 80;
     location / {
-        root /usr/share/nginx/html;
+        return 200;
     }
+    location /booking {
+      proxy_pass https://dgca-booking-demo-backend.cfapps.eu10.hana.ondemand.com/booking;
+    }
+    location /boardingpass {
+      proxy_pass https://dgca-booking-demo-backend.cfapps.eu10.hana.ondemand.com/boardingpass;
+    }
+    location /validationStatus {
+      proxy_pass https://dgca-booking-demo-backend.cfapps.eu10.hana.ondemand.com/validationStatus;
+    }  
 }
