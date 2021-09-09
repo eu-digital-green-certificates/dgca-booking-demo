@@ -1,8 +1,5 @@
 name: ci-release
 on:
-  release:
-    types:
-    - created
   workflow_dispatch:
     inputs:
       version:
@@ -12,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     env:
-      APP_VERSION: ${{ github.event.release.tag_name }}
+       APP_VERSION: ${{ github.event.inputs.version }}
     steps:
     - uses: actions/checkout@v2
       with:
