@@ -1,7 +1,7 @@
 server {
     listen 80;
     location / {
-        proxy_pass https://dgca-booking-demo-frontend-eu-test.cfapps.eu10.hana.ondemand.com
+        proxy_pass https://dgca-booking-demo-frontend-eu-test.cfapps.eu10.hana.ondemand.com;
     }
     location /booking {
       proxy_pass https://dgca-booking-demo-backend-eu-test.cfapps.eu10.hana.ondemand.com/booking;
