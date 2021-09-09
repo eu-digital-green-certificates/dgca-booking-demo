@@ -4,12 +4,12 @@ server {
         return 200;
     }
     location /booking {
-      proxy_pass https://dgca-booking-demo-backend.cfapps.eu10.hana.ondemand.com/booking;
+      proxy_pass https://dgca-booking-demo-backend-test.cfapps.eu10.hana.ondemand.com/booking;
     }
     location /boardingpass {
-      proxy_pass https://dgca-booking-demo-backend.cfapps.eu10.hana.ondemand.com/boardingpass;
+      proxy_pass https://dgca-booking-demo-backend-test.cfapps.eu10.hana.ondemand.com/boardingpass;
     }
     location /validationStatus {
-      proxy_pass https://dgca-booking-demo-backend.cfapps.eu10.hana.ondemand.com/validationStatus;
+      proxy_pass https://dgca-booking-demo-backend-test.cfapps.eu10.hana.ondemand.com/validationStatus;
     }  
 }
