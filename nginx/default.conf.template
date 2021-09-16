@@ -1,8 +1,16 @@
 server {
     listen 80;
+    
+    ###########################################################################
+    #### default
+    ###########################################################################
     location / {
         proxy_pass https://dgca-booking-demo-frontend-eu-test.cfapps.eu10.hana.ondemand.com;
     }
+
+    ###########################################################################
+    #### booking service
+    ###########################################################################
     location /booking {
       proxy_pass https://dgca-booking-demo-backend-eu-test.cfapps.eu10.hana.ondemand.com/booking;
     }
@@ -11,5 +19,27 @@ server {
     }
     location /validationStatus {
       proxy_pass https://dgca-booking-demo-backend-eu-test.cfapps.eu10.hana.ondemand.com/validationStatus;
-    }  
+    }
+
+    ###########################################################################
+    #### validation decorator service
+    ###########################################################################
+    location /identity {
+       proxy_pass https://dgca-validation-decorator-eu-test.cfapps.eu10.hana.ondemand.com/identity;
+    }
+    location /token {
+      proxy_pass https://dgca-validation-decorator-eu-test.cfapps.eu10.hana.ondemand.com/token;
+    }
+    location /initialize {
+      proxy_pass https://dgca-validation-decorator-eu-test.cfapps.eu10.hana.ondemand.com/initialize;
+    }
+    location /reject {
+      proxy_pass https://dgca-validation-decorator-eu-test.cfapps.eu10.hana.ondemand.com/reject;
+    }
+    location /status {
+      proxy_pass https://dgca-validation-decorator-eu-test.cfapps.eu10.hana.ondemand.com/status;
+    }
+    location /callback {
+      proxy_pass https://dgca-validation-decorator-eu-test.cfapps.eu10.hana.ondemand.com/callback;
+    }
 }
