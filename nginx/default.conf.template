@@ -12,12 +12,15 @@ server {
     #### booking service
     ###########################################################################
     location /booking {
+      proxy_set_header Authorization "PROXY_AUTH";
       proxy_pass https://dgca-booking-demo-backend-eu-test.cfapps.eu10.hana.ondemand.com/booking;
     }
     location /boardingpass {
+      proxy_set_header Authorization "PROXY_AUTH";
       proxy_pass https://dgca-booking-demo-backend-eu-test.cfapps.eu10.hana.ondemand.com/boardingpass;
     }
     location /validationStatus {
+      proxy_set_header Authorization "PROXY_AUTH";
       proxy_pass https://dgca-booking-demo-backend-eu-test.cfapps.eu10.hana.ondemand.com/validationStatus;
     }
 
@@ -31,6 +34,7 @@ server {
       proxy_pass https://dgca-validation-decorator-eu-test.cfapps.eu10.hana.ondemand.com/token;
     }
     location /initialize {
+      proxy_set_header Authorization "PROXY_AUTH";
       proxy_pass https://dgca-validation-decorator-eu-test.cfapps.eu10.hana.ondemand.com/initialize;
     }
     location /reject {
