@@ -11,15 +11,15 @@ server {
     ###########################################################################
     #### booking service
     ###########################################################################
-    location /booking {
+    location /api/booking {
       proxy_set_header Authorization "PROXY_AUTH";
       proxy_pass https://dgca-booking-demo-backend-eu-test.cfapps.eu10.hana.ondemand.com/booking;
     }
-    location /boardingpass {
+    location /api/boardingpass {
       proxy_set_header Authorization "PROXY_AUTH";
       proxy_pass https://dgca-booking-demo-backend-eu-test.cfapps.eu10.hana.ondemand.com/boardingpass;
     }
-    location /validationStatus {
+    location /api/validationStatus {
       proxy_set_header Authorization "PROXY_AUTH";
       proxy_pass https://dgca-booking-demo-backend-eu-test.cfapps.eu10.hana.ondemand.com/validationStatus;
     }
@@ -27,23 +27,23 @@ server {
     ###########################################################################
     #### validation decorator service
     ###########################################################################
-    location /identity {
+    location /api/identity {
        proxy_pass https://dgca-validation-decorator-eu-test.cfapps.eu10.hana.ondemand.com/identity;
     }
-    location /token {
+    location /api/token {
       proxy_pass https://dgca-validation-decorator-eu-test.cfapps.eu10.hana.ondemand.com/token;
     }
-    location /initialize {
+    location /api/initialize {
       proxy_set_header Authorization "PROXY_AUTH";
       proxy_pass https://dgca-validation-decorator-eu-test.cfapps.eu10.hana.ondemand.com/initialize;
     }
-    location /reject {
+    location /api/reject {
       proxy_pass https://dgca-validation-decorator-eu-test.cfapps.eu10.hana.ondemand.com/reject;
     }
-    location /status {
+    location /api/status {
       proxy_pass https://dgca-validation-decorator-eu-test.cfapps.eu10.hana.ondemand.com/status;
     }
-    location /callback {
+    location /api/callback {
       proxy_pass https://dgca-validation-decorator-eu-test.cfapps.eu10.hana.ondemand.com/callback;
     }
 }
