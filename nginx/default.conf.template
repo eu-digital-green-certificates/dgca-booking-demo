@@ -48,14 +48,17 @@ server {
     }
     
     location /api/devStatusNOK {
-        return 200 '{"result":"NOK","results":[{"identifier":"KID","result":"NOK","type":"TechnicalVerification","details":"unknown dcc signing kid"}],"confirmation":"eyJraWQiOiJSQU0yU3R3N0VrRT0iLCJhbGciOiJFUzI1NiJ9.eyJqdGkiOiJkODBmMzg0Yy05MjczLTQ2ZDctYjg4Mi1mOTM4OTVkMTQ2NmMiLCJzdWIiOiIwZmQwYzExZC0wZTFhLTQwODQtOTc1ZC00ZTgyMzhkM2Y0ZTkiLCJpYXQiOjE2MzI3NTM3NzksInJlc3VsdCI6Ik5PSyJ9.OuJTFkqwongKa5ZoqvY9JqEC_PuE-IIW2efFTeCvJpXbtaSaT5gDtD_CwZEy0Kq7Xz8EWAQPgUDcO9bQCx18CA"}'
+        default_type application/json;
+        return 200 '{"result":"NOK","results":[{"identifier":"KID","result":"NOK","type":"TechnicalVerification","details":"unknown dcc signing kid"}],"confirmation":"eyJraWQiOiJSQU0yU3R3N0VrRT0iLCJhbGciOiJFUzI1NiJ9.eyJqdGkiOiJkODBmMzg0Yy05MjczLTQ2ZDctYjg4Mi1mOTM4OTVkMTQ2NmMiLCJzdWIiOiIwZmQwYzExZC0wZTFhLTQwODQtOTc1ZC00ZTgyMzhkM2Y0ZTkiLCJpYXQiOjE2MzI3NTM3NzksInJlc3VsdCI6Ik5PSyJ9.OuJTFkqwongKa5ZoqvY9JqEC_PuE-IIW2efFTeCvJpXbtaSaT5gDtD_CwZEy0Kq7Xz8EWAQPgUDcO9bQCx18CA"}';
     }
     
     location /api/devStatusOK {
-        return 200 '{"result":"OK","results":[],"confirmation":"eyJraWQiOiJSQU0yU3R3N0VrRT0iLCJhbGciOiJFUzI1NiJ9.eyJqdGkiOiJkODBmMzg0Yy05MjczLTQ2ZDctYjg4Mi1mOTM4OTVkMTQ2NmMiLCJzdWIiOiIwZmQwYzExZC0wZTFhLTQwODQtOTc1ZC00ZTgyMzhkM2Y0ZTkiLCJpYXQiOjE2MzI3NTM3NzksInJlc3VsdCI6Ik5PSyJ9.OuJTFkqwongKa5ZoqvY9JqEC_PuE-IIW2efFTeCvJpXbtaSaT5gDtD_CwZEy0Kq7Xz8EWAQPgUDcO9bQCx18CA"}'
+        default_type application/json;
+        return 200 '{"result":"OK","results":[],"confirmation":"eyJraWQiOiJSQU0yU3R3N0VrRT0iLCJhbGciOiJFUzI1NiJ9.eyJqdGkiOiJkODBmMzg0Yy05MjczLTQ2ZDctYjg4Mi1mOTM4OTVkMTQ2NmMiLCJzdWIiOiIwZmQwYzExZC0wZTFhLTQwODQtOTc1ZC00ZTgyMzhkM2Y0ZTkiLCJpYXQiOjE2MzI3NTM3NzksInJlc3VsdCI6Ik5PSyJ9.OuJTFkqwongKa5ZoqvY9JqEC_PuE-IIW2efFTeCvJpXbtaSaT5gDtD_CwZEy0Kq7Xz8EWAQPgUDcO9bQCx18CA"}';
     }
     
      location /api/devStatusCHK {
-        return 200 '{"result":"CHK","results":[{"identifier":"KID","result":"CHK","type":"TechnicalVerification","details":"Dummy Result. Something to clarify"}],"confirmation":"eyJraWQiOiJSQU0yU3R3N0VrRT0iLCJhbGciOiJFUzI1NiJ9.eyJqdGkiOiJkODBmMzg0Yy05MjczLTQ2ZDctYjg4Mi1mOTM4OTVkMTQ2NmMiLCJzdWIiOiIwZmQwYzExZC0wZTFhLTQwODQtOTc1ZC00ZTgyMzhkM2Y0ZTkiLCJpYXQiOjE2MzI3NTM3NzksInJlc3VsdCI6Ik5PSyJ9.OuJTFkqwongKa5ZoqvY9JqEC_PuE-IIW2efFTeCvJpXbtaSaT5gDtD_CwZEy0Kq7Xz8EWAQPgUDcO9bQCx18CA"}'
+        default_type application/json;
+        return 200 '{"result":"CHK","results":[{"identifier":"KID","result":"CHK","type":"TechnicalVerification","details":"Dummy Result. Something to clarify"}],"confirmation":"eyJraWQiOiJSQU0yU3R3N0VrRT0iLCJhbGciOiJFUzI1NiJ9.eyJqdGkiOiJkODBmMzg0Yy05MjczLTQ2ZDctYjg4Mi1mOTM4OTVkMTQ2NmMiLCJzdWIiOiIwZmQwYzExZC0wZTFhLTQwODQtOTc1ZC00ZTgyMzhkM2Y0ZTkiLCJpYXQiOjE2MzI3NTM3NzksInJlc3VsdCI6Ik5PSyJ9.OuJTFkqwongKa5ZoqvY9JqEC_PuE-IIW2efFTeCvJpXbtaSaT5gDtD_CwZEy0Kq7Xz8EWAQPgUDcO9bQCx18CA"}';
     }
 }
