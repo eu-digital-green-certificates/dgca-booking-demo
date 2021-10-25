@@ -36,7 +36,7 @@ The component contains only a NGINX Proxy Server to serve multiple Backend Endpo
 
 ### Prerequisites
 
-The NGINX Configuration must be prepared for the own endpoints before building it. 
+The NGINX Configuration must be prepared for the own endpoints before building it (https://github.com/eu-digital-green-certificates/dgca-booking-demo/blob/main/nginx/default.conf.template). The Proxy Auth should be set if any requirements to the backend servers are necessary. 
 
 ### Build
 
