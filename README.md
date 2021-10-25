@@ -30,21 +30,18 @@
 
 This repository contains the source code of the EU Digital COVID Certificate Booking Demo.
 
-- [ ] TODO: Describe Component
+The component contains only a NGINX Proxy Server to serve multiple Backend Endpoints better to one central domain. 
 
 ## Development
 
 ### Prerequisites
 
-- [ ] TODO: Prerequisites
+The NGINX Configuration must be prepared for the own endpoints before building it. 
 
 ### Build
 
-- [ ] TODO: Build
+Run docker build for the docker file. 
 
-## Documentation
-
-- [ ] TODO: Documentation
 
 ## Support and feedback
 
