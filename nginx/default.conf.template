@@ -4,6 +4,11 @@ server {
     ###########################################################################
     #### default
     ###########################################################################
+    
+    location ~* \.(eot|ttf|woff|woff2)$ {
+    add_header Access-Control-Allow-Origin *;
+    }
+    
     location / {
         proxy_pass https://dgca-booking-demo-frontend-eu-test.cfapps.eu10.hana.ondemand.com;
     }
