@@ -42,7 +42,8 @@ The NGINX Configuration must be prepared for the own endpoints before building i
 
 Run docker build for the docker file. 
 
-
+## Documentation
+Documentation of the Booking Demo can be found at the [EU Health Network document library](https://health.ec.europa.eu/system/files/2021-10/covid-certificate_traveller-onlinebooking_en_0.pdf)
 ## Support and feedback
 
 The following channels are available for discussions, feedback, and support requests:
